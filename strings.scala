@@ -39,10 +39,11 @@ object strings  {
     
   def getFormattedName(name : String) :String = {
       "Reformatted"
-       name.split(" "). reverse. mkstring(" ,")
+      name.split(" ").reverse.mkString(", ")
+        }
      
   }
-}
+
 
 
                  
