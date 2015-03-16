@@ -1,6 +1,7 @@
 import scala.math.min
 
 object strings  {
+    
 
 /*
 
@@ -23,25 +24,27 @@ object strings  {
 
 
    def getSentenceType(sentence : String) : String = {
-     
-      "unknown"
+       
+       if(sentence.endsWith("?")){
+             ("interrogative")}else{
+             if(sentence.endsWith(".")){
+                 ("declarative")}else{
+                 if(sentence.endsWith("!")){
+                    ("exclamatory")}else{
+                     ("unknown")
+                 }
+             }
+       }
    }
-
-/*
-   Given a name as input.  Assume first and last names
-   are separated by a space (no middle name).
-   Print last name first followed by a comma
-   and a space, followed by the first name.
-   For example, if the input is
-   ``"Marcel Proust"``, the output is ``"Proust, Marcel"``.
-
-   If the name doesn't have any spaces in it (i.e. it is a single
-   name, e.g. Madonna, return the name as is.
- */
-
-   def getFormattedName(name : String) : String = {
+    
+  def getFormattedName(name : String) :String = {
+      "Reformatted"
+       name.split(" "). reverse. mkstring(" ,")
      
-      "name not calculated yet"
-   }
-
+  }
 }
+
+
+                 
+                
+   
