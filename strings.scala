@@ -38,11 +38,16 @@ object strings  {
    }
     
   def getFormattedName(name : String) :String = {
-      "Reformatted"
-      name.split(" ").reverse.mkString(", ")
-        }
-     
-  }
+      var output = ""
+      var names = name.split(" ")
+      if (names.size == 3) { output += names(2) + ", " + names(0) + " " + names(1)
+       val k = output.toString
+       k}else{
+          names.reverse.mkString(", ")
+                           
+      }
+   }
+}
 
 
 
